@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Harry Walker's Calculator App!</title>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Harry Walker's Calculator App!</h1>
+    <div class="display" id="display">0</div>
+    <div class="buttons" id="buttons content"></div>
+    <script>
+      <!-- Fetch buttons.html file -->
+      fetch('html-components/buttons.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('buttons content').innerHTML = data;
+        })
+        .catch(error => console.log('Error loading the buttons.html file:', error));
+    </script>
+  </div>
+</body>
+</html>
