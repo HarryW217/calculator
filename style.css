@@ -7,6 +7,12 @@
   box-shadow: 0 2px 5px rgba(19, 18, 18, 0.1);
 }
 
+.heading{
+  font-size: 20px;
+  text-align: center;
+  font-weight:700;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 .display {
   height: 60px;
   font-size: 40px;
@@ -37,11 +43,4 @@ button {
 
 button:hover {
   background-color: #e1e1e1;
-}
-
-.heading{
-  font-size: 20px;
-  text-align: center;
-  font-weight:700;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
