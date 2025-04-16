@@ -47,3 +47,24 @@ function calculate(){
     // Set resultDisplayed to true, as a result is now displayed
     resultDisplayed = true;
 }
+
+// Function to clear the last character from the display
+function clearLastCharacter(){
+    // Remove the last character from the current display
+    currentDisplay = currentDisplay.slice(0, -1);
+    // If the display is empty, set it to 0
+    if(currentDisplay === ''){
+        currentDisplay = '0';
+    }
+    // And finally, update the display with the new value
+    updateDisplay();
+}
+
+// Function to clear the full display
+function clearFullDisplay(){
+    // Reset the variables
+    currentDisplay = '0';
+    resultDisplayed = false;
+    // And update the display to show 0
+    updateDisplay();
+}
