@@ -30,3 +30,20 @@ function updateDisplay(){
     display.textContent = currentDisplay;
 }
  
+// Function to calculate and display the result
+function calculate(){
+    try {
+        // Use eval to calculate the result of the expression in currentDisplay
+        const result = eval(currentDisplay);
+        // Append the result to the current display...
+        currentDisplay += "\n=" + result.toString();
+        // ...and then update it!
+        updateDisplay();
+    } catch (error) {
+        // If there's an error in the expression, display error message
+        currentDisplay += '\nSorry, an error occured!';
+        updateDisplay();
+    } 
+    // Set resultDisplayed to true, as a result is now displayed
+    resultDisplayed = true;
+}
