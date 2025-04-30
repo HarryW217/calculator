@@ -4,6 +4,9 @@ let resultDisplayed = false
 
 // Function to append a value to the current display
 function appendToDisplay(value){
+    if (resultDisplayed) {
+        return;
+    }
     if(currentDisplay === '0' || resultDisplayed){
         /*
         If the current display is 0 or a result was just displayed,
@@ -32,6 +35,10 @@ function updateDisplay(){
  
 // Function to calculate and display the result
 function calculate(){
+    if (resultDisplayed) {
+        return;
+    }
+
     try {
         // Use eval to calculate the result of the expression in currentDisplay
         const result = eval(currentDisplay);
@@ -50,6 +57,9 @@ function calculate(){
 
 // Function to clear the last character from the display
 function clearLastCharacter(){
+    if (resultDisplayed){
+        return;
+    }
     // Remove the last character from the current display
     currentDisplay = currentDisplay.slice(0, -1);
     // If the display is empty, set it to 0
