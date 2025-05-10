@@ -2,7 +2,7 @@
 <button onclick="appendToDisplay('(')">(</button>
 <button onclick="appendToDisplay(')')">)</button>
 <button onclick="clearLastCharacter()">CE</button>
-<button onclick="clearFullDisplay()">C</button>
+<button onclick="clearFullDisplay(document.querySelectorAll('button'))">C</button>
 <button onclick="appendToDisplay('7')">7</button>
 <button onclick="appendToDisplay('8')">8</button>
 <button onclick="appendToDisplay('9')">9</button>
@@ -17,5 +17,5 @@
 <button onclick="appendToDisplay('-')">-</button>
 <button onclick="appendToDisplay('0')">0</button>
 <button onclick="appendToDisplay('.')">.</button>
-<button onclick="calculate()">=</button>
+<button onclick="calculate(document.querySelectorAll('button'))">=</button>
 <button onclick="appendToDisplay('+')">+</button>

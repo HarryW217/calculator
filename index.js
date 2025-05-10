@@ -34,7 +34,7 @@ function updateDisplay(){
 }
  
 // Function to calculate and display the result
-function calculate(){
+function calculate(buttons){
     if (resultDisplayed) {
         return;
     }
@@ -53,6 +53,13 @@ function calculate(){
     } 
     // Set resultDisplayed to true, as a result is now displayed
     resultDisplayed = true;
+
+    // Disable all buttons except "C"
+    buttons.forEach(button => {
+        if (button.textContent !== 'C') {
+            button.disabled = true;
+        }
+    });
 }
 
 // Function to clear the last character from the display
@@ -71,10 +78,16 @@ function clearLastCharacter(){
 }
 
 // Function to clear the full display
-function clearFullDisplay(){
+function clearFullDisplay(buttons){
     // Reset the variables
     currentDisplay = '0';
     resultDisplayed = false;
     // And update the display to show 0
     updateDisplay();
+    // Enable all the disabled buttons
+    buttons.forEach(button => {
+        if (button.textContent !== 'C') {
+            button.disabled = false;
+        }
+    });
 }
