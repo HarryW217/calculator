@@ -6,7 +6,7 @@ This is a simple calculator project built using JavaScript. It performs basic ar
 
 ## Hosted Version
 
-Coming soon...
+Try it out for yourself here, for all your calculation needs: https://harrys-calculator.netlify.app/
 
 ## What I Learned
 
